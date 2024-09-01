@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for Responsive Design and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple weather app that shows current weather, a 5-day forecast, and today's highlights based on a selected city or user's location.">
+
+    <title>Weather App</title>
+
+    <!-- External CSS Libraries for Icons -->
+    <link href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Weather App by Diego Aguirre</h1>
+    </header>
+
+    <!-- Main Container for the Weather Application -->
+    <main class="container">
+        <!-- User Input Section -->
+        <section class="header">
+            <h2>Weather</h2>
+            <div class="weather-input">
+                <!-- Input Field for City Name -->
+                <label for="city_input" class="visually-hidden">City Name</label>
+                <input type="text" name="city" id="city_input" placeholder="Enter city name">
+                <!-- Button for Searching Weather by City Name -->
+                <button type="button" id="searchBtn">
+                    <i class="fa-regular fa-search"></i> Search
+                </button>
+                <!-- Button for Fetching Weather Based on User Location -->
+                <button type="button" id="locationBtn">
+                    <i class="fa fa-map-marker-alt"></i> My Location
+                </button>
+            </div>
+        </section>
+
+        <!-- Section for Displaying Weather Data -->
+        <section class="weather-data">
+            <div class="weather-left">
+                <!-- Current Weather Card -->
+                <article class="card">
+                    <div class="current-weather">
+                        <div class="details">
+                            <p>Now</p>
+                            <!-- Placeholder for Current Temperature -->
+                            <h2>&deg;C</h2>
+                            <p></p>
+                        </div>
+                        <!-- Placeholder for Weather Icon -->
+                        <div class="weather-icon">
+                            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon" loading="lazy">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-footer">
+                        <!-- Placeholder for Date and Location -->
+                        <p><i class="fa-light fa-calendar"></i> Date</p>
+                        <p><i class="fa-light fa-location-dot"></i> Location</p>
+                    </div>
+                </article>
+
+                <!-- 5 Days Forecast Section -->
+                <article class="card">
+                    <h2>5 Days Forecast</h2>
+                    <div class="day-forecast">
+                        <!-- Placeholder for Forecast Items -->
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
+                                <span>___&deg;C</span>
+                            </div>
+                            <p>___</p>
+                            <p>___</p>
+                        </div>
+                        <!-- Repeat above div block for each day in the forecast -->
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
+                                <span>___&deg;C</span>
+                            </div>
+                            <p>___</p>
+                            <p>___</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
+                                <span>___&deg;C</span>
+                            </div>
+                            <p>___</p>
+                            <p>___</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
+                                <span>___&deg;C</span>
+                            </div>
+                            <p>___</p>
+                            <p>___</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
+                                <span>___&deg;C</span>
+                            </div>
+                            <p>___</p>
+                            <p>___</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Right Section for Today's Highlights -->
+            <div class="weather-right">
+                <h2>Today's Highlights</h2>
+                <div class="highlights">
+                    <!-- Card for Air Quality Index -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Air Quality Index</p>
+                            <p class="air-index aqi-1">Good</p>
+                        </div>
+                        <div class="air-indices">
+                            <i class="fa-regular fa-wind fa-3x"></i>
+                            <!-- Placeholder for Air Quality Indices -->
+                            <div class="item">
+                                <p>PM2.5</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>PM10</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>SO2</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>CO</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>NO</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>NO2</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>NH3</p>
+                                <h2>____</h2>
+                            </div>
+                            <div class="item">
+                                <p>O3</p>
+                                <h2>____</h2>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card for Sunrise and Sunset Times -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Sunrise & Sunset</p>
+                        </div>
+                        <div class="sunrise-sunset">
+                            <!-- Placeholder for Sunrise Time -->
+                            <div class="item">
+                                <div class="icon">
+                                    <i class="fa-light fa-sunrise fa-4x"></i>
+                                </div>
+                                <div>
+                                    <p>Sunrise</p>
+                                    <h2>_____</h2>
+                                </div>
+                            </div>
+                            <!-- Placeholder for Sunset Time -->
+                            <div class="item">
+                                <div class="icon">
+                                    <i class="fa-light fa-sunset fa-4x"></i>
+                                </div>
+                                <div>
+                                    <p>Sunset</p>
+                                    <h2>_____</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card for Humidity -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Humidity</p>
+                        </div>
+                        <div class="card-item">
+                            <i class="fa-light fa-droplet fa-2x"></i>
+                            <!-- Placeholder for Humidity Value -->
+                            <h2 id="humidityVal">____%</h2>
+                        </div>
+                    </article>
+
+                    <!-- Card for Pressure -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Pressure</p>
+                        </div>
+                        <div class="card-item">
+                            <i class="fa-light fa-barometer fa-2x"></i>
+                            <!-- Placeholder for Pressure Value -->
+                            <h2 id="pressureVal">____hPa</h2>
+                        </div>
+                    </article>
+
+                    <!-- Card for Visibility -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Visibility</p>
+                        </div>
+                        <div class="card-item">
+                            <i class="fa-light fa-eye fa-2x"></i>
+                            <!-- Placeholder for Visibility Value -->
+                            <h2 id="visibilityVal">____km</h2>
+                        </div>
+                    </article>
+
+                    <!-- Card for Wind Speed -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Wind Speed</p>
+                        </div>
+                        <div class="card-item">
+                            <i class="fa-light fa-location-arrow fa-2x"></i>
+                            <!-- Placeholder for Wind Speed Value -->
+                            <h2 id="windSpeedVal">____m/s</h2>
+                        </div>
+                    </article>
+
+                    <!-- Card for Feels Like Temperature -->
+                    <article class="card">
+                        <div class="card-head">
+                            <p>Feels Like</p>
+                        </div>
+                        <div class="card-item">
+                            <i class="fa-light fa-temperature-list fa-2x"></i>
+                            <!-- Placeholder for Feels Like Temperature -->
+                            <h2 id="feelsVal">____&deg;C</h2>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Section for Hourly Forecast -->
+                <h2>Today at</h2>
+                <div class="hourly-forecast">
+                    <!-- Placeholder for Hourly Forecast Items -->
+                    <div class="card">
+                        <p>9 AM</p>
+                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
+                        <p>___&deg;C</p>
+                    </div>
+                    <!-- Repeat above div block for each hour -->
+                    <div class="card">
+                        <p>10 AM</p>
+                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
+                        <p>___&deg;C</p>
+                    </div>
+                    <div class="card">
+                        <p>11 AM</p>
+                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
+                        <p>___&deg;C</p>
+                    </div>
+                    <div class="card">
+                        <p>12 PM</p>
+                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
+                        <p>___&deg;C</p>
+                    </div>
+                    <!-- Continue for more hourly cards if needed -->
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

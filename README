@@ -1,0 +1,75 @@
+Weather App
+Overview
+This Weather App is a web-based application that allows users to get real-time weather information for any city in the world. It displays the current weather conditions, a 5-day forecast, and additional details such as air quality, sunrise/sunset times, humidity, pressure, visibility, wind speed, and how the temperature feels. Users can search for a city's weather or use their current location to get weather details.
+
+Features
+Search by City: Enter a city name to fetch the current weather and 5-day forecast.
+Geolocation: Use the user's current location to fetch weather data.
+Current Weather: Displays current temperature, weather description, and an icon.
+5-Day Forecast: Shows temperature and weather conditions for the next 5 days.
+Air Quality Index (AQI): Provides air quality details with relevant indices.
+Additional Weather Metrics: Includes details like humidity, pressure, visibility, wind speed, and "feels like" temperature.
+Responsive Design: Optimized for both desktop and mobile devices.
+Technologies Used
+HTML/CSS: For structuring and styling the app.
+JavaScript: For fetching and displaying weather data.
+OpenWeatherMap API: To retrieve real-time weather data and air quality information.
+Geolocation API: To get the user's current location.
+Installation and Setup
+Prerequisites
+A modern web browser (Chrome, Firefox, Safari, etc.).
+An active internet connection to fetch weather data from the OpenWeatherMap API.
+Steps to Run Locally
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+Open the Project:
+
+Open the index.html file in your preferred web browser.
+
+Set Up API Key:
+
+The API key is already included in the JavaScript file. If you wish to use your own API key:
+Replace the existing API key in script.js with your own from OpenWeatherMap.
+javascript
+Copy code
+let apiKey = 'your_api_key_here';
+Usage
+Search for a City:
+
+Enter the name of a city in the search bar and click the "Search" button or press Enter.
+The app will display the current weather and 5-day forecast for the selected city.
+Use Your Current Location:
+
+Click the "My Location" button to fetch the weather for your current geographical location.
+Ensure that your browser has permission to access your location.
+Demo
+Here is a short demo video showcasing the features of the Weather App:
+
+[Demo Video Link]
+
+Screenshots
+Home Screen
+
+Weather Details
+
+Contributing
+If you'd like to contribute to this project:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-branch).
+Make your changes.
+Commit your changes (git commit -m 'Add some feature').
+Push to the branch (git push origin feature-branch).
+Open a Pull Request.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Contact
+Name: Diego Aguirre
+Email: diego1992aguirre@gmail.com
+GitHub: https://github.com/diego1aguirre
+LinkedIn: https://www.linkedin.com/in/diego-aguirre-guerra/
