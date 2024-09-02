@@ -1,3 +1,7 @@
+<!-- 
+    Weather App
+    Created by Diego Aguirre
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +22,6 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Weather App by Diego Aguirre</h1>
-    </header>
-
     <!-- Main Container for the Weather Application -->
     <main class="container">
         <!-- User Input Section -->
@@ -30,7 +29,7 @@
             <h2>Weather</h2>
             <div class="weather-input">
                 <!-- Input Field for City Name -->
-                <label for="city_input" class="visually-hidden">City Name</label>
+                <label for="city_input" class="visually-hidden"></label>
                 <input type="text" name="city" id="city_input" placeholder="Enter city name">
                 <!-- Button for Searching Weather by City Name -->
                 <button type="button" id="searchBtn">
@@ -73,6 +72,7 @@
                     <h2>5 Days Forecast</h2>
                     <div class="day-forecast">
                         <!-- Placeholder for Forecast Items -->
+                        <!-- Each forecast-item represents a day in the forecast -->
                         <div class="forecast-item">
                             <div class="icon-wrapper">
                                 <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
@@ -82,38 +82,7 @@
                             <p>___</p>
                         </div>
                         <!-- Repeat above div block for each day in the forecast -->
-                        <div class="forecast-item">
-                            <div class="icon-wrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
-                                <span>___&deg;C</span>
-                            </div>
-                            <p>___</p>
-                            <p>___</p>
-                        </div>
-                        <div class="forecast-item">
-                            <div class="icon-wrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
-                                <span>___&deg;C</span>
-                            </div>
-                            <p>___</p>
-                            <p>___</p>
-                        </div>
-                        <div class="forecast-item">
-                            <div class="icon-wrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
-                                <span>___&deg;C</span>
-                            </div>
-                            <p>___</p>
-                            <p>___</p>
-                        </div>
-                        <div class="forecast-item">
-                            <div class="icon-wrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" alt="Weather Icon" loading="lazy">
-                                <span>___&deg;C</span>
-                            </div>
-                            <p>___</p>
-                            <p>___</p>
-                        </div>
+                        <!-- ... -->
                     </div>
                 </article>
             </div>
@@ -131,38 +100,13 @@
                         <div class="air-indices">
                             <i class="fa-regular fa-wind fa-3x"></i>
                             <!-- Placeholder for Air Quality Indices -->
+                            <!-- Each item represents a specific air quality measurement -->
                             <div class="item">
                                 <p>PM2.5</p>
                                 <h2>____</h2>
                             </div>
-                            <div class="item">
-                                <p>PM10</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>SO2</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>CO</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>NO</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>NO2</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>NH3</p>
-                                <h2>____</h2>
-                            </div>
-                            <div class="item">
-                                <p>O3</p>
-                                <h2>____</h2>
-                            </div>
+                            <!-- Repeat for other air quality indices -->
+                            <!-- ... -->
                         </div>
                     </article>
 
@@ -175,7 +119,7 @@
                             <!-- Placeholder for Sunrise Time -->
                             <div class="item">
                                 <div class="icon">
-                                    <i class="fa-light fa-sunrise fa-4x"></i>
+                                    <i class="fa-solid fa-sunrise fa-4x"></i>
                                 </div>
                                 <div>
                                     <p>Sunrise</p>
@@ -185,7 +129,7 @@
                             <!-- Placeholder for Sunset Time -->
                             <div class="item">
                                 <div class="icon">
-                                    <i class="fa-light fa-sunset fa-4x"></i>
+                                    <i class="fa-solid fa-sunset fa-4x"></i>
                                 </div>
                                 <div>
                                     <p>Sunset</p>
@@ -213,7 +157,7 @@
                             <p>Pressure</p>
                         </div>
                         <div class="card-item">
-                            <i class="fa-light fa-barometer fa-2x"></i>
+                            <i class="fa-light fa-droplet fa-2x"></i>
                             <!-- Placeholder for Pressure Value -->
                             <h2 id="pressureVal">____hPa</h2>
                         </div>
@@ -260,34 +204,37 @@
                 <h2>Today at</h2>
                 <div class="hourly-forecast">
                     <!-- Placeholder for Hourly Forecast Items -->
+                    <!-- Each card represents an hour's forecast -->
                     <div class="card">
                         <p>9 AM</p>
                         <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
                         <p>___&deg;C</p>
                     </div>
                     <!-- Repeat above div block for each hour -->
-                    <div class="card">
-                        <p>10 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
-                        <p>___&deg;C</p>
-                    </div>
-                    <div class="card">
-                        <p>11 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
-                        <p>___&deg;C</p>
-                    </div>
-                    <div class="card">
-                        <p>12 PM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="Weather Icon" loading="lazy">
-                        <p>___&deg;C</p>
-                    </div>
-                    <!-- Continue for more hourly cards if needed -->
+                    <!-- ... -->
                 </div>
             </div>
         </section>
-
-        
     </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-card">
+        <p>© 2024 Diego Aguirre</p>
+        <p>
+            <a href="mailto:diego1992aguirre@gmail.com">
+                <i class="fa-solid fa-envelope"></i> Email
+            </a>
+            <a href="https://github.com/diego1aguirre" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/diego-aguirre-guerra/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.linkedin.com/school/productmanagerinterview/about/" target="_blank">
+                <i class="fa-sharp fa-solid fa-circle-info"></i> PM Accelerator Info
+            </a>
+        </p>
+    </footer>
 
     <!-- External JavaScript Libraries -->
     <script src="https://momentjs.com/downloads/moment.min.js"></script>

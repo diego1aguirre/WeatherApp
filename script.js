@@ -1,8 +1,13 @@
+/**
+ * Weather App
+ * Created by Diego Aguirre
+ */
+
 // Global Variables
 let cityInput = document.getElementById('city_input'),
     searchBtn = document.getElementById('searchBtn'),
     locationBtn = document.getElementById('locationBtn'),
-    apiKey = '575e0de342b75bb66517f97bfc998773'; 
+    apiKey = '575e0de342b75bb66517f97bfc998773';  // API key for accessing weather data
 
 // DOM Elements for Updating Weather Information
 let currentWeatherCard = document.querySelector('.weather-left .card');
@@ -21,7 +26,7 @@ let aqiList = ['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor'];
 
 // Function to Fetch and Display Weather Details
 function getWeatherDetails(name, lat, lon, country, state) {
-    // API URLs
+    // API URLs for weather, forecast, and air quality data
     let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`,
         WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`,
         AIR_POLLUTION_API_URL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
@@ -75,7 +80,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
             let { description, icon } = data.weather[0];
             let { sunrise, sunset } = data.sys;
             let { timezone, visibility } = data;
-            
+
             // Convert temperature from Kelvin to Celsius
             let tempCelsius = (temp - 273.15).toFixed(2);
             let feelsCelsius = (feels_like - 273.15).toFixed(2);
@@ -84,7 +89,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
             let SRiseTime = moment.utc(sunrise, 'X').add(timezone, 'seconds').format('hh:mm A');
             let SSetTime = moment.utc(sunset, 'X').add(timezone, 'seconds').format('hh:mm A');
 
-            // Update Current Weather Card
+            // Update Current Weather Card with the fetched data
             currentWeatherCard.innerHTML = `
                 <div class="current-weather">
                     <div class="details">
@@ -110,7 +115,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                 <div class="sunrise-sunset">
                     <div class="item">
                         <div class="icon">
-                            <i class="fa-light fa-sunrise fa-4x"></i>
+                            <i class="fa-solid fa-sunrise fa-4x"></i>
                         </div>
                         <div>
                             <p>Sunrise</p>
@@ -119,7 +124,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                     </div>
                     <div class="item">
                         <div class="icon">
-                            <i class="fa-light fa-sunset fa-4x"></i>
+                            <i class="fa-solid fa-sunset fa-4x"></i>
                         </div>
                         <div>
                             <p>Sunset</p>
@@ -198,7 +203,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
         });
 }
 
-// Function to Get City Coordinates
+// Function to Get City Coordinates from City Name
 function getCityCoordinates() {
     let cityName = cityInput.value.trim();
 

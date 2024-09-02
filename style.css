@@ -1,6 +1,10 @@
-:root {
-    --bg-color1: #212529; /* Main background color */
-    --bg-color2: #2a2b2d; /* Secondary background color for cards */
+/**
+ * Weather App
+ * Created by Diego Aguirre
+ */
+ :root {
+    --bg-color1: #1e3a5f; /* Main background color */
+    --bg-color2: #324a69; /* Secondary background color for cards */
     --aqi-1: #8ce157; /* AQI Level 1 */
     --aqi-2: #ffee58; /* AQI Level 2 */
     --aqi-3: #ffad28; /* AQI Level 3 */
@@ -324,4 +328,32 @@ p:not(.card-footer p) {
     .air-indices {
         grid-template-columns: repeat(2, 1fr); /* Adjusts to 2-column grid */
     }
+}
+
+.footer-card {
+    background-color: var(--bg-color2); /* Match the secondary background color */
+    color: #ffffff; /* Ensure text is white for contrast */
+    text-align: center; /* Center-align all text and content */
+    padding: 15px; /* Consistent padding with other cards */
+    position: relative; /* Position relative to other content */
+    font-weight: bold; /* Make the text a bit stronger */
+    border-radius: 15px; /* Consistent border-radius with other cards */
+    grid-column: span 4; /* Span across all 4 columns of the grid */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.footer-card a {
+    color: #ffffff; /* Ensure link color is white */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 15px; /* Add spacing between links */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Stronger link text */
+}
+
+.footer-card a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-card i {
+    margin-right: 5px; /* Spacing between icons and text */
 }
