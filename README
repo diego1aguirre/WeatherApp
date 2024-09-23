@@ -72,10 +72,3 @@ This project was developed using a variety of resources to guide and support the
 
 - **FontAwesome:** Icons used in the application are sourced from [FontAwesome](https://fontawesome.com/).
 - **OpenWeatherMap API:** The weather data is fetched using the [OpenWeatherMap API](https://openweathermap.org/api).
-
-### Tutorials and Guides:
-
-- **GreatStack:** [How To Make Weather App Using JavaScript Step By Step Explained](https://www.youtube.com/watch?v=MIYQR-Ybrn4&list=WL&index=5&t=312s).
-- **Devression:** [Build a Simple Weather App with HTML, CSS, and JavaScript | Beginner Tutorial](https://www.youtube.com/watch?v=74IOjtVvExY&list=WL&index=6).
-- **Ashiqur Rahman Pranto:** [Realtime Weather App | HTML, CSS, JS | P1 | Header Design](https://www.youtube.com/watch?v=GARsvcSdtj8&list=WL&index=3).
-- **freeCodeCamp.org:** [React JS Tutorial – Build a Weather App With Cities Autocomplete](https://www.youtube.com/watch?v=Reny0cTTv24&t=2078s).
